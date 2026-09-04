@@ -1,0 +1,12 @@
+# Generated test media files (created by scripts/generate-test-files.sh)
+test-sine.*
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ac3
+*.eac3
+
+# Keep README
+!README.md
+!.gitignore

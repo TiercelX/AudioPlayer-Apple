@@ -1,0 +1,71 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install build dependencies
+        run: brew install nasm
+
+      - name: Cache FFmpeg audio-core
+        id: cache-ffmpeg
+        uses: actions/cache@v4
+        with:
+          path: AudioPlayerMac/ffmpeg-audio-core
+          key: ffmpeg-audio-core-${{ hashFiles('scripts/build-ffmpeg-audio-core.sh') }}
+
+      - name: Build FFmpeg audio-core
+        if: steps.cache-ffmpeg.outputs.cache-hit != 'true'
+        run: ./scripts/build-ffmpeg-audio-core.sh --force --arch arm64
+
+      - name: Build Xcode project
+        run: |
+          xcodebuild \
+            -project AudioPlayerMac/AudioPlayerMac.xcodeproj \
+            -scheme AudioPlayerMac \
+            -configuration Debug \
+            build
+
+      - name: Run tests
+        run: |
+          xcodebuild \
+            -project AudioPlayerMac/AudioPlayerMac.xcodeproj \
+            -scheme AudioPlayerMac \
+            -configuration Debug \
+            test
+
+      - name: Generate test media files
+        run: |
+          brew install ffmpeg
+          ./AudioPlayerMac/scripts/generate-test-files.sh 5
+
+      - name: Run playback smoke test
+        run: |
+          ./AudioPlayerMac/scripts/run-playback-smoke.sh AudioPlayerMac/test-files
+
+      - name: Upload smoke report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-report
+          path: AudioPlayerMac/build/reports/playback-smoke-*.json

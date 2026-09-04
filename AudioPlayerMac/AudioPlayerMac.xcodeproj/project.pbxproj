@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0867D6A5FE841209C02B0002 /* AudioPlayerMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02B0001 /* AudioPlayerMacTests.swift */; };
+		0867D6A5FE841209C02A0001 /* AudioPlayerMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0020 /* AudioPlayerMacApp.swift */; };
+		0867D6A5FE841209C02A0002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0021 /* AppState.swift */; };
+		0867D6A5FE841209C02A0003 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0022 /* AudioEngine.swift */; };
+		0867D6A5FE841209C02A0004 /* PlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0023 /* PlaybackController.swift */; };
+		0867D6A5FE841209C02A0005 /* DecoderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0024 /* DecoderRouter.swift */; };
+		0867D6A5FE841209C02A0006 /* AVFoundationDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0025 /* AVFoundationDecoder.swift */; };
+		0867D6A5FE841209C02A0007 /* FFmpegDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0026 /* FFmpegDecoder.swift */; };
+		0867D6A5FE841209C02A0008 /* AudioFormatDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0027 /* AudioFormatDetector.swift */; };
+		0867D6A5FE841209C02A0009 /* DolbyDownmixProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0028 /* DolbyDownmixProcessor.swift */; };
+		0867D6A5FE841209C02A000A /* AudioDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0029 /* AudioDecoder.swift */; };
+		0867D6A5FE841209C02A000B /* SourceProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A002A /* SourceProbe.swift */; };
+		0867D6A5FE841209C02A000C /* SourcePreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A002B /* SourcePreparer.swift */; };
+		0867D6A5FE841209C02A000D /* PlaybackPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A002C /* PlaybackPlan.swift */; };
+		0867D6A5FE841209C02A000E /* MediaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A002D /* MediaInfo.swift */; };
+		0867D6A5FE841209C02A000F /* AudioArtifactMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A002E /* AudioArtifactMonitor.swift */; };
+		0867D6A5FE841209C02A0010 /* PlayerLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A002F /* PlayerLogger.swift */; };
+		0867D6A5FE841209C02A0011 /* DiagnosticReportBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0030 /* DiagnosticReportBuilder.swift */; };
+		0867D6A5FE841209C02A0012 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0031 /* MainWindow.swift */; };
+		0867D6A5FE841209C02A0013 /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0032 /* PlayerControlsView.swift */; };
+		0867D6A5FE841209C02A0014 /* FFmpegBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0035 /* FFmpegBridge.c */; };
+		0867D6A5FE841209C02A0015 /* OutputDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0038 /* OutputDeviceManager.swift */; };
+		0867D6A5FE841209C02A0016 /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A0039 /* VolumeController.swift */; };
+		0867D6A5FE841209C02A0017 /* PcmSeekCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A003A /* PcmSeekCache.swift */; };
+		0867D6A5FE841209C02A0018 /* PcmStreamBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A003B /* PcmStreamBuffer.swift */; };
+		0867D6A5FE841209C02A0019 /* FFmpegWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A003C /* FFmpegWrapper.swift */; };
+		0867D6A5FE841209C02A001A /* DecoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A003D /* DecoderError.swift */; };
+		0867D6A5FE841209C02A001B /* MediaInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE841209C02A003E /* MediaInfoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D6A5FE841209C02B0001 /* AudioPlayerMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerMacTests.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02B0004 /* AudioPlayerMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioPlayerMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0867D6A5FE841209C02A0020 /* AudioPlayerMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerMacApp.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0021 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0022 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0023 /* PlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackController.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0024 /* DecoderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderRouter.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0025 /* AVFoundationDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationDecoder.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0026 /* FFmpegDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFmpegDecoder.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0027 /* AudioFormatDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFormatDetector.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0028 /* DolbyDownmixProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolbyDownmixProcessor.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0029 /* AudioDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDecoder.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A002A /* SourceProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceProbe.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A002B /* SourcePreparer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcePreparer.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A002C /* PlaybackPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackPlan.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A002D /* MediaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfo.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A002E /* AudioArtifactMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioArtifactMonitor.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A002F /* PlayerLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLogger.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0030 /* DiagnosticReportBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticReportBuilder.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0031 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0032 /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0033 /* AudioPlayerMac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioPlayerMac-Bridging-Header.h"; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0034 /* FFmpegBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegBridge.h; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0035 /* FFmpegBridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FFmpegBridge.c; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0037 /* AudioPlayerMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayerMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0867D6A5FE841209C02A0038 /* OutputDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputDeviceManager.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A0039 /* VolumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeController.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A003A /* PcmSeekCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PcmSeekCache.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A003B /* PcmStreamBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PcmStreamBuffer.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A003C /* FFmpegWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFmpegWrapper.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A003D /* DecoderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderError.swift; sourceTree = "<group>"; };
+		0867D6A5FE841209C02A003E /* MediaInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0867D6A5FE841209C02B0006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0867D6A5FE841209C02A0051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		0867D6A5FE841209C02B000C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D6A5FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0867D6A5FE841209C02AAC08;
+			remoteInfo = AudioPlayerMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXGroup section */
+		0867D6A5FE841209C02A0040 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0043 /* AudioPlayerMac */,
+				0867D6A5FE841209C02B0003 /* Tests */,
+				0867D6A5FE841209C02A0041 /* Products */,
+				0867D6A5FE841209C02A0042 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0037 /* AudioPlayerMac.app */,
+				0867D6A5FE841209C02B0004 /* AudioPlayerMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0042 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0043 /* AudioPlayerMac */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0044 /* App */,
+				0867D6A5FE841209C02A0045 /* Core */,
+				0867D6A5FE841209C02A0046 /* Decoders */,
+				0867D6A5FE841209C02A004A /* Source */,
+				0867D6A5FE841209C02A004B /* Diagnostics */,
+				0867D6A5FE841209C02A004C /* UI */,
+				0867D6A5FE841209C02A004D /* Utilities */,
+				0867D6A5FE841209C02A0033 /* AudioPlayerMac-Bridging-Header.h */,
+				0867D6A5FE841209C02A0034 /* FFmpegBridge.h */,
+				0867D6A5FE841209C02A0035 /* FFmpegBridge.c */,
+				0867D6A5FE841209C02A0036 /* Info.plist */,
+			);
+			path = AudioPlayerMac;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0044 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0020 /* AudioPlayerMacApp.swift */,
+				0867D6A5FE841209C02A0021 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0045 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0022 /* AudioEngine.swift */,
+				0867D6A5FE841209C02A0023 /* PlaybackController.swift */,
+				0867D6A5FE841209C02A0024 /* DecoderRouter.swift */,
+				0867D6A5FE841209C02A0038 /* OutputDeviceManager.swift */,
+				0867D6A5FE841209C02A0039 /* VolumeController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0046 /* Decoders */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0047 /* AVFoundation */,
+				0867D6A5FE841209C02A0048 /* FFmpeg */,
+				0867D6A5FE841209C02A0049 /* Common */,
+			);
+			path = Decoders;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0047 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0025 /* AVFoundationDecoder.swift */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0048 /* FFmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0026 /* FFmpegDecoder.swift */,
+				0867D6A5FE841209C02A003C /* FFmpegWrapper.swift */,
+			);
+			path = FFmpeg;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A0049 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0027 /* AudioFormatDetector.swift */,
+				0867D6A5FE841209C02A0028 /* DolbyDownmixProcessor.swift */,
+				0867D6A5FE841209C02A0029 /* AudioDecoder.swift */,
+				0867D6A5FE841209C02A003A /* PcmSeekCache.swift */,
+				0867D6A5FE841209C02A003B /* PcmStreamBuffer.swift */,
+				0867D6A5FE841209C02A003D /* DecoderError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A004A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A002A /* SourceProbe.swift */,
+				0867D6A5FE841209C02A002B /* SourcePreparer.swift */,
+				0867D6A5FE841209C02A002C /* PlaybackPlan.swift */,
+				0867D6A5FE841209C02A002D /* MediaInfo.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A004B /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A002E /* AudioArtifactMonitor.swift */,
+				0867D6A5FE841209C02A002F /* PlayerLogger.swift */,
+				0867D6A5FE841209C02A0030 /* DiagnosticReportBuilder.swift */,
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A004C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02A0031 /* MainWindow.swift */,
+				0867D6A5FE841209C02A0032 /* PlayerControlsView.swift */,
+				0867D6A5FE841209C02A003E /* MediaInfoView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02A004D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0867D6A5FE841209C02B0003 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE841209C02B0001 /* AudioPlayerMacTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0867D6A5FE841209C02B0008 /* AudioPlayerMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0867D6A5FE841209C02B000B /* Build configuration list for PBXNativeTarget "AudioPlayerMacTests" */;
+			buildPhases = (
+				0867D6A5FE841209C02B0005 /* Sources */,
+				0867D6A5FE841209C02B0006 /* Frameworks */,
+				0867D6A5FE841209C02B0007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0867D6A5FE841209C02B000D /* PBXTargetDependency */,
+			);
+			name = AudioPlayerMacTests;
+			productName = AudioPlayerMacTests;
+			productReference = 0867D6A5FE841209C02B0004 /* AudioPlayerMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0867D6A5FE841209C02AAC08 /* AudioPlayerMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0867D6A5FE841209C02A0071 /* Build configuration list for PBXNativeTarget "AudioPlayerMac" */;
+			buildPhases = (
+				0867D6A5FE841209C02A0050 /* Sources */,
+				0867D6A5FE841209C02A0051 /* Frameworks */,
+				0867D6A5FE841209C02A0052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioPlayerMac;
+			productName = AudioPlayerMac;
+			productReference = 0867D6A5FE841209C02A0037 /* AudioPlayerMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D6A5FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0867D6A5FE841209C02B0008 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 0867D6A5FE841209C02AAC08;
+					};
+					0867D6A5FE841209C02AAC08 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 0867D6A5FE841209C02A0070 /* Build configuration list for PBXProject "AudioPlayerMac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0867D6A5FE841209C02A0040 /* root */;
+			productRefGroup = 0867D6A5FE841209C02A0041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0867D6A5FE841209C02AAC08 /* AudioPlayerMac */,
+				0867D6A5FE841209C02B0008 /* AudioPlayerMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0867D6A5FE841209C02B0007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0867D6A5FE841209C02A0052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0867D6A5FE841209C02B0005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0867D6A5FE841209C02B0002 /* AudioPlayerMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0867D6A5FE841209C02A0050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0867D6A5FE841209C02A0001 /* AudioPlayerMacApp.swift in Sources */,
+				0867D6A5FE841209C02A0002 /* AppState.swift in Sources */,
+				0867D6A5FE841209C02A0003 /* AudioEngine.swift in Sources */,
+				0867D6A5FE841209C02A0004 /* PlaybackController.swift in Sources */,
+				0867D6A5FE841209C02A0005 /* DecoderRouter.swift in Sources */,
+				0867D6A5FE841209C02A0006 /* AVFoundationDecoder.swift in Sources */,
+				0867D6A5FE841209C02A0007 /* FFmpegDecoder.swift in Sources */,
+				0867D6A5FE841209C02A0008 /* AudioFormatDetector.swift in Sources */,
+				0867D6A5FE841209C02A0009 /* DolbyDownmixProcessor.swift in Sources */,
+				0867D6A5FE841209C02A000A /* AudioDecoder.swift in Sources */,
+				0867D6A5FE841209C02A000B /* SourceProbe.swift in Sources */,
+				0867D6A5FE841209C02A000C /* SourcePreparer.swift in Sources */,
+				0867D6A5FE841209C02A000D /* PlaybackPlan.swift in Sources */,
+				0867D6A5FE841209C02A000E /* MediaInfo.swift in Sources */,
+				0867D6A5FE841209C02A000F /* AudioArtifactMonitor.swift in Sources */,
+				0867D6A5FE841209C02A0010 /* PlayerLogger.swift in Sources */,
+				0867D6A5FE841209C02A0011 /* DiagnosticReportBuilder.swift in Sources */,
+				0867D6A5FE841209C02A0012 /* MainWindow.swift in Sources */,
+				0867D6A5FE841209C02A0013 /* PlayerControlsView.swift in Sources */,
+				0867D6A5FE841209C02A0014 /* FFmpegBridge.c in Sources */,
+				0867D6A5FE841209C02A0015 /* OutputDeviceManager.swift in Sources */,
+				0867D6A5FE841209C02A0016 /* VolumeController.swift in Sources */,
+				0867D6A5FE841209C02A0017 /* PcmSeekCache.swift in Sources */,
+				0867D6A5FE841209C02A0018 /* PcmStreamBuffer.swift in Sources */,
+				0867D6A5FE841209C02A0019 /* FFmpegWrapper.swift in Sources */,
+				0867D6A5FE841209C02A001A /* DecoderError.swift in Sources */,
+				0867D6A5FE841209C02A001B /* MediaInfoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0867D6A5FE841209C02B000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0867D6A5FE841209C02AAC08 /* AudioPlayerMac */;
+			targetProxy = 0867D6A5FE841209C02B000C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0867D6A5FE841209C02A0060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0867D6A5FE841209C02A0061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0867D6A5FE841209C02A0062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				"DEVELOPMENT_TEAM[sdk=*]" = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/include",
+					"/usr/local/include",
+					"/opt/homebrew/include",
+				);
+				INFOPLIST_FILE = AudioPlayerMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/lib",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lavcodec",
+					"-lavformat",
+					"-lavutil",
+					"-lswresample",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.audioplayer.mac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioPlayerMac/AudioPlayerMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0867D6A5FE841209C02A0063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				"DEVELOPMENT_TEAM[sdk=*]" = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/include",
+					"/usr/local/include",
+					"/opt/homebrew/include",
+				);
+				INFOPLIST_FILE = AudioPlayerMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/lib",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lavcodec",
+					"-lavformat",
+					"-lavutil",
+					"-lswresample",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.audioplayer.mac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioPlayerMac/AudioPlayerMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0867D6A5FE841209C02B0009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				"DEVELOPMENT_TEAM[sdk=*]" = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/include",
+					"/usr/local/include",
+					"/opt/homebrew/include",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/lib",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.audioplayer.mac.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioPlayerMac/AudioPlayerMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioPlayerMac.app/Contents/MacOS/AudioPlayerMac";
+			};
+			name = Debug;
+		};
+		0867D6A5FE841209C02B000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				"DEVELOPMENT_TEAM[sdk=*]" = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/include",
+					"/usr/local/include",
+					"/opt/homebrew/include",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg-audio-core/universal/lib",
+					"/usr/local/lib",
+					"/opt/homebrew/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.audioplayer.mac.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioPlayerMac/AudioPlayerMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioPlayerMac.app/Contents/MacOS/AudioPlayerMac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0867D6A5FE841209C02A0070 /* Build configuration list for PBXProject "AudioPlayerMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0867D6A5FE841209C02A0060 /* Debug */,
+				0867D6A5FE841209C02A0061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0867D6A5FE841209C02A0071 /* Build configuration list for PBXNativeTarget "AudioPlayerMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0867D6A5FE841209C02A0062 /* Debug */,
+				0867D6A5FE841209C02A0063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0867D6A5FE841209C02B000B /* Build configuration list for PBXNativeTarget "AudioPlayerMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0867D6A5FE841209C02B0009 /* Debug */,
+				0867D6A5FE841209C02B000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D6A5FE841209C02AAC07 /* Project object */;
+}
